@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+<form method="post" action="{{url_for('logic_routes.add_meal')}}">
+    <label for="meal_name">Meal name</label>
+    <input name="meal_name" type="text" id="meal_name">
+    <label for="meal_price">Meal price</label>
+    <input name="meal_price" type="text" id="meal_price">
+    <input type="submit"/>
+</form>
+
+{% endblock %}

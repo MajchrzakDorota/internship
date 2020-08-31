@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Main page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+          integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{url_for('static', filename='custom.css')}}">
+  </head>
+  <body>
+    <div class="nav">
+      <ul>
+        <li>
+          <a href="{{url_for('form_routes.add_meal_form')}}">Add meal</a>
+        </li>
+        <li>
+          <a href="{{url_for('form_routes.add_service_form')}}">Add service</a>
+        </li>
+        <li>
+          <a href="{{url_for('form_routes.check_discount_form')}}">Check discount</a>
+        </li>
+        <li>
+          <a href="{{url_for('logic_routes.sum')}}">Check sum</a>
+        </li>
+        <li>
+          <a href="{{url_for('logic_routes.add_discount', discount= '10')}}"> Check current price
+          with 10% discount</a>
+        </li>
+        <li>
+          <a href="{{url_for('form_routes.contact_form')}}">Contact form</a>
+        </li>
+        <li>
+          <a href="{{url_for('logic_routes.create_a_bill')}}">Create a bill</a>
+        </li>
+      </ul>
+    </div>
+    <div class="container">
+      {% block content %} {% endblock %}
+    </div>
+  </body>
+</html>

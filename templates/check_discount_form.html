@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+<form method="post" action="{{url_for('logic_routes.check')}}">
+    <p>
+        <label for="overall_sum">Overall sum</label>
+        <input name="overall_sum" type="text" id="overall_sum">
+    </p>
+    <p>
+        <label for="discount">Discount (%)</label>
+        <input name="discount" type="text" id="discount">
+    </p>
+    <p><input type="submit" /></p>
+</form>
+{% endblock %}

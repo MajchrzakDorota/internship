@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+<form method="post" action="{{url_for('logic_routes.send_message')}}">
+    <p>
+        <label for="user_name">Name</label>
+        <input name="user_name" type="text" id="user_name">
+    </p>
+    <p>
+        <label for="user_text">Tekst</label>
+        <textarea name="user_text" id="user_text"></textarea>
+    </p>
+    <p><input type="submit"/></p>
+</form>
+
+{% endblock %}
